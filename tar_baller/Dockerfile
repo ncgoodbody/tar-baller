@@ -4,13 +4,13 @@ FROM alpine:3.20
 WORKDIR /app
 
 # Install necessary packages
-RUN apk add --no-cache tar find
+RUN apk add --no-cache tar findutils
 
 # Copy the script into the container
-COPY clean_and_compress.sh clean_and_compress.sh
+COPY clean_and_compress.sh /app/clean_and_compress.sh
 
 # Make the script executable
-RUN chmod +x clean_and_compress.sh
+RUN chmod +x /app/clean_and_compress.sh
 
 # Set the entrypoint to the script
-ENTRYPOINT ["clean_and_compress.sh"]
+ENTRYPOINT ["/app/clean_and_compress.sh"]
