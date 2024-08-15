@@ -9,7 +9,7 @@ fi
 DIRECTORY=$1
 
 # Remove all .DS_Store files recursively
-find "$DIRECTORY" -name ".DS_Store" -type f -delete
+find "/data/$DIRECTORY" -name ".DS_Store" -type f -delete
 
 # Compress the directory into a tar.gz file
-tar -czf "$DIRECTORY.tar.gz" "$DIRECTORY"
+cd /data && tar -czf "$DIRECTORY.tar.gz" "$DIRECTORY"
