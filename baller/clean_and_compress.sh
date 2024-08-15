@@ -12,4 +12,4 @@ DIRECTORY=$1
 find "/data/$DIRECTORY" -name ".DS_Store" -type f -delete
 
 # Compress the directory into a tar.gz file
-cd /data && tar -czf "$DIRECTORY.tar.gz" "$DIRECTORY"
+cd /data && tar -czf "baller.tar.gz" "$DIRECTORY"
